@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&G Personalizações</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="home.html"><img src="img/logo.jpg" alt="S&G Personalizações Logo" style="height: 150px ;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item mx-1">
+                        <a class="btn btn-nav active" aria-current="page" href="home.html">Início</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="btn btn-nav" href="produtos.html">Produtos</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="btn btn-nav" href="cadastro.html">Cadastro</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="btn btn-nav" href="contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a href="carrinho.html" class="btn btn-nav position-relative">
+                            <i class="bi bi-cart-fill"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                3
+                                <span class="visually-hidden">itens no carrinho</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrossel de Banners -->
+    <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/rodapé.jpg" class="d-block w-100" alt="Banner Promocional 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/brindes.jpg" class="d-block w-100" alt="Banner Promocional 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/papelaria personalizada.webp" class="d-block w-100" alt="Banner Promocional 3">
+            </div>
+            <div class="carousel-item">
+                <img src="img/agendas.webp" class="d-block w-100" alt="Banner Promocional 4">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+<main>
+    <!-- Seção de Produtos -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Nossos Produtos</h2>
+        <div class="row">
+
+            <!-- ADESIVOS -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/adesivos.png" class="card-img-top" alt="Adesivos">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Adesivos</h5>
+                        <p class="card-text">Adesivos personalizados para todas as ocasiões.</p>
+                        <div class="mt-auto">
+                            <label for="qty-adesivos" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-adesivos">
+                                <option value="25">25 unidades</option>
+                                <option value="50">50 unidades</option>
+                                <option value="100">100 unidades</option>
+                            </select>
+                            <a href="view.html?id=adesivos" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AGENDAS -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/agendas1.jpg" class="card-img-top" alt="Agendas">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Agendas</h5>
+                        <p class="card-text">Agendas personalizadas para organizar seu dia a dia.</p>
+                        <div class="mt-auto">
+                            <label for="qty-agendas" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-agendas">
+                                <option value="25">25 unidades</option>
+                                <option value="50">50 unidades</option>
+                                <option value="100">100 unidades</option>
+                            </select>
+                            <a href="view.html?id=agendas" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AZULEJOS -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/azulejo.jpg" class="card-img-top" alt="Azulejos">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Azulejos</h5>
+                        <p class="card-text">Azulejos personalizados para decoração.</p>
+                        <div class="mt-auto">
+                            <label for="qty-azulejos" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-azulejos">
+                                <option value="1">1 unidade</option>
+                                <option value="5">5 unidades</option>
+                                <option value="10">10 unidades</option>
+                            </select>
+                            <a href="view.html?id=azulejos" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BRINDES -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/brindes.jpg" class="card-img-top" alt="Brindes">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Brindes</h5>
+                        <p class="card-text">Brindes corporativos e para eventos.</p>
+                        <div class="mt-auto">
+                            <label for="qty-brindes" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-brindes">
+                                <option value="25">25 unidades</option>
+                                <option value="50">50 unidades</option>
+                                <option value="100">100 unidades</option>
+                            </select>
+                            <a href="view.html?id=brindes" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BANNER -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/banneer.jpg" class="card-img-top" alt="Banner">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Banner</h5>
+                        <p class="card-text">Banners em lona para divulgação.</p>
+                        <div class="mt-auto">
+                            <label for="qty-banner" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-banner">
+                                <option value="1">1 unidade</option>
+                                <option value="5">5 unidades</option>
+                                <option value="10">10 unidades</option>
+                            </select>
+                            <a href="view.html?id=banner" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CANECAS -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/caneca1.jpg" class="card-img-top" alt="Canecas">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Canecas</h5>
+                        <p class="card-text">Canecas de cerâmica ou polímero com a sua arte.</p>
+                        <div class="mt-auto">
+                            <label for="qty-canecas" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-canecas">
+                                <option value="25">25 unidades</option>
+                                <option value="50">50 unidades</option>
+                                <option value="100">100 unidades</option>
+                            </select>
+                            <a href="view.html?id=canecas" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHAVEIROS -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/chaveiros.webp" class="card-img-top" alt="Chaveiros">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Chaveiros</h5>
+                        <p class="card-text">Chaveiros personalizados de diversos materiais.</p>
+                        <div class="mt-auto">
+                            <label for="qty-chaveiros" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-chaveiros">
+                                <option value="25">25 unidades</option>
+                                <option value="50">50 unidades</option>
+                                <option value="100">100 unidades</option>
+                            </select>
+                            <a href="view.html?id=chaveiros" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARTÃO DE VISITA -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/cartaodevisita.webp" class="card-img-top" alt="Cartão de Visita">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Cartão de Visita</h5>
+                        <p class="card-text">Cartões de visita com acabamentos diversos.</p>
+                        <div class="mt-auto">
+                            <label for="qty-cartao" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-cartao">
+                                <option value="100">100 unidades</option>
+                                <option value="250">250 unidades</option>
+                                <option value="500">500 unidades</option>
+                            </select>
+                            <a href="view.html?id=cartao_visita" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CAMISETAS -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/camiseta.jpeg" class="card-img-top" alt="Camisetas">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Camisetas</h5>
+                        <p class="card-text">Camisetas de alta qualidade com estampas criativas.</p>
+                        <div class="mt-auto">
+                            <label for="qty-camisetas" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-camisetas">
+                                <option value="1">1 unidade</option>
+                                <option value="10">10 unidades</option>
+                                <option value="25">25 unidades</option>
+                            </select>
+                            <a href="view.html?id=camisetas" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLASTIFICAÇÃO -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/Plastificacao.webp" class="card-img-top" alt="Plastificação">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Plastificação</h5>
+                        <p class="card-text">Serviços de plastificação de documentos.</p>
+                        <div class="mt-auto">
+                            <label for="qty-plastificacao" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-plastificacao">
+                                <option value="1">1 unidade</option>
+                                <option value="10">10 unidades</option>
+                                <option value="50">50 unidades</option>
+                            </select>
+                            <a href="view.html?id=plastificacao" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PEGUE E MONTE -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/pegueemonte.jpg" class="card-img-top" alt="Pegue e Monte">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Pegue e Monte</h5>
+                        <p class="card-text">Kits 'Pegue e Monte' para festas.</p>
+                        <div class="mt-auto">
+                            <label for="qty-pegueemonte" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-pegueemonte">
+                                <option value="1">1 kit</option>
+                                <option value="3">3 kits</option>
+                                <option value="5">5 kits</option>
+                            </select>
+                            <a href="view.html?id=pegue_e_monte" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANFLETO -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/panfletos.webp" class="card-img-top" alt="Panfleto">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Panfleto</h5>
+                        <p class="card-text">Panfletos para divulgação de seu negócio.</p>
+                        <div class="mt-auto">
+                            <label for="qty-panfleto" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-panfleto">
+                                <option value="100">100 unidades</option>
+                                <option value="250">250 unidades</option>
+                                <option value="500">500 unidades</option>
+                            </select>
+                            <a href="view.html?id=panfleto" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TOPOS PARA BOLO -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/topo.webp" class="card-img-top" alt="Topos para Bolo">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Topos para Bolo</h5>
+                        <p class="card-text">Topos de bolo personalizados para sua festa.</p>
+                        <div class="mt-auto">
+                            <label for="qty-topos" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-topos">
+                                <option value="1">1 unidade</option>
+                                <option value="5">5 unidades</option>
+                                <option value="10">10 unidades</option>
+                            </select>
+                            <a href="view.html?id=topos_bolo" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IMPRESSÃO -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/impressao.jpg" class="card-img-top" alt="Impressão">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Impressão</h5>
+                        <p class="card-text">Serviços de impressão em geral.</p>
+                        <div class="mt-auto">
+                            <label for="qty-impressao" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-impressao">
+                                <option value="1">1 folha</option>
+                                <option value="10">10 folhas</option>
+                                <option value="50">50 folhas</option>
+                            </select>
+                            <a href="view.html?id=impressao" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ENCADERNAÇÃO -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/encadernacao.png" class="card-img-top" alt="Encadernação">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Encadernação</h5>
+                        <p class="card-text">Encadernação de apostilas e trabalhos.</p>
+                        <div class="mt-auto">
+                            <label for="qty-encadernacao" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-encadernacao">
+                                <option value="1">1 unidade</option>
+                                <option value="5">5 unidades</option>
+                                <option value="10">10 unidades</option>
+                            </select>
+                            <a href="view.html?id=encadernacao" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOCIAL MIDIA -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/mediasocial.jpg" class="card-img-top" alt="Social Midia">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Social Midia</h5>
+                        <p class="card-text">Criação de artes para redes sociais.</p>
+                        <div class="mt-auto">
+                            <label for="qty-social" class="form-label">Quantidade:</label>
+                            <select class="form-select mb-3" id="qty-social">
+                                <option value="1">1 arte</option>
+                                <option value="5">Pacote 5 artes</option>
+                                <option value="10">Pacote 10 artes</option>
+                            </select>
+                            <a href="view.html?id=social_midia" class="btn btn-primary w-100">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+    <!-- Rodapé Novo -->
+<footer class="mt-auto text-white" style="background-color: var(--cor-principal);">
+    <div class="container p-4">
+        <div class="row">
+            <!-- Coluna 1: Logo e Sobre -->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <a class="navbar-brand" href="home.html"><img src="img/logo.jpg" alt="S&G Personalizações Logo" style="height: 120px; border-radius: 50%; border: 3px solid white;"></a>
+                <p class="mt-2" style="color: #fdeefd;">
+                    Realizando sonhos em forma de personalizados. Qualidade e carinho em cada detalhe.
+                </p>
+            </div>
+
+            <!-- Coluna 2: Contato -->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-3" style="color: #fdeefd;">Contato</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <p style="color: #fdeefd;"><i class="bi bi-whatsapp"></i> (11) 94289-9507</p>
+                    </li>
+                    <li>
+                        <p style="color: #fdeefd;"><i class="bi bi-whatsapp"></i> (11) 91329-2588</p>
+                    </li>
+                    <li>
+                        <p style="color: #fdeefd;"><i class="bi bi-envelope-fill"></i> sgbrindessp@gmail.com</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Coluna 3: Redes Sociais -->
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0 text-center">
+                <h5 class="text-uppercase mb-3" style="color: #fdeefd;">Nos siga</h5>
+                <a href="https://www.instagram.com/S.GBRINDES" target="_blank" class="btn btn-outline-light btn-floating m-1" role="button">
+                    <i class="bi bi-instagram fs-4"></i>
+                </a>
+                <a href="https://wa.me/5511913292588" target="_blank" class="btn btn-outline-light btn-floating m-1" role="button">
+                    <i class="bi bi-whatsapp fs-4"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2025 S&G Personalizações
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

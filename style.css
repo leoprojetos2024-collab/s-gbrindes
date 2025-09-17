@@ -1,0 +1,93 @@
+/* Paleta de cores extraída do banner */
+:root {
+    --cor-principal: #6d4c41; /* Marrom escuro do logo */
+    --cor-fundo: #fdeefd;    /* Rosa/lilás claro do fundo */
+    --cor-destaque: #e91e63; /* Rosa vibrante dos ícones */
+    --cor-texto: #333;
+    --cor-fundo-alt: #fce4f9; /* Um tom de rosa um pouco mais escuro para seções */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+.navbar {
+    background-color: var(--cor-fundo-alt) !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    border-radius: 20%;
+    border: 3px solid var(--cor-principal);
+}
+
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover; /* Para a imagem cobrir o espaço sem distorcer */
+}
+
+.card-title {
+    color: var(--cor-principal);
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--cor-principal);
+    border-color: var(--cor-principal);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    background-color: var(--cor-principal);
+    border-color: var(--cor-principal);
+}
+
+/* Estilos para os botões de navegação */
+.btn-nav {
+    background-color: transparent;
+    color: var(--cor-principal);
+    border-radius: 20px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--cor-principal);
+    font-weight: bold;
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+.btn-nav:hover, .btn-nav.active {
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+/* Estilos para o Carrossel de Banners */
+.carousel-item img {
+    height: 400px; /* Você pode ajustar essa altura */
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Estilos para o Rodapé */
+footer.text-white a {
+    color: var(--cor-fundo); /* Cor de fundo rosa/lilás claro para links */
+    text-decoration: none;
+}
+
+footer.text-white a:hover {
+    color: white;
+}
