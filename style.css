@@ -7,10 +7,37 @@
     --cor-fundo-alt: #fce4f9; /* Um tom de rosa um pouco mais escuro para seções */
 }
 
+/* 
+  Adicione o arquivo da fonte "loubag" na pasta "fonts". 
+  Se o nome do arquivo for diferente de "loubag.woff2", 
+  altere o valor de "src" abaixo.
+*/
+@font-face {
+    font-family: 'loubag';
+    src: url('fonts/loubag.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
+    position: relative; /* Necessário para o z-index do pseudo-elemento */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: url('img/logo.jpg');
+    background-repeat: repeat;
+    transform: rotate(-30deg);
+    opacity: 0.05;
+    z-index: -1; /* Coloca a marca d'água atrás de todo o conteúdo */
 }
 
 .navbar {
@@ -43,6 +70,7 @@ body {
 }
 
 .card-title {
+    font-family: 'loubag', sans-serif; /* Alterado para a nova fonte */
     color: var(--cor-principal);
     font-weight: bold;
 }
