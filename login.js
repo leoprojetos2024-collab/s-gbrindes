@@ -7,8 +7,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     // ATENÇÃO: As credenciais estão hardcoded aqui. 
     // Para um ambiente de produção, use um sistema de autenticação seguro.
-    const validUsername = 'admin';
-    const validPassword = 'admin';
+    const validUsername = 'sgbrindes';
+    const validPassword = 'kl232330120819';
 
     if (username === validUsername && password === validPassword) {
         // Armazena o status de autenticação na sessionStorage
