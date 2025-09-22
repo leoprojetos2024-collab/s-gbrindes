@@ -1,11 +1,14 @@
 // view.js
 
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('view.js loaded');
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
+    console.log('Product ID from URL:', productId);
 
     if (productId) {
         const product = products.find(p => p.id === productId);
+        console.log('Found product:', product);
 
         if (product) {
             document.getElementById('productImage').src = product.image;
@@ -35,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('basicCustomizationInfo').textContent = product.customization.basic;
             document.getElementById('advancedCustomizationInfo').textContent = product.customization.advanced;
 
+            /*
             // Add to Cart button logic
             document.getElementById('addToCartBtn').addEventListener('click', () => {
                 const quantity = parseInt(productQuantitySelect.value);
@@ -49,14 +53,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     description: product.description,
                     customization: basicCustomization // Add basic customization to the item
                 };
+                console.log('Adding item to cart:', itemToAdd);
                 addItem(itemToAdd); // Call addItem from cart.js
             });
+            */
 
         } else {
+            console.error('Product not found for ID:', productId);
             // Product not found
             document.querySelector('.container').innerHTML = '<h2 class="text-center text-danger">Produto não encontrado!</h2>';
         }
     } else {
+        console.error('No product ID in URL');
         // No product ID in URL
         document.querySelector('.container').innerHTML = '<h2 class="text-center text-danger">Nenhum produto especificado.</h2>';
     }

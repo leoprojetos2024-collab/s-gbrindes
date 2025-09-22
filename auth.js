@@ -3,17 +3,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const adminLink = document.getElementById('admin-link');
     const logoutLink = document.getElementById('logout-link');
 
-    if (isAuthenticated) {
-        if (adminLink) adminLink.style.display = 'none';
-        if (logoutLink) logoutLink.style.display = 'block';
+    // Função para atualizar a visibilidade dos elementos da UI
+    const updateAuthUI = (isAuth, adminEl, logoutEl) => {
+        if (adminEl) {
+            adminEl.style.display = isAuth ? 'none' : 'block';
+        }
+        if (logoutEl) {
+            logoutEl.style.display = isAuth ? 'block' : 'none';
+        }
+    };
 
-        logoutLink.addEventListener('click', function(event) {
+    // 1. Atualiza a UI
+    updateAuthUI(isAuthenticated, adminLink, logoutLink);
+
+    // 2. Adiciona a funcionalidade de logout se o usuário estiver autenticado
+    if (isAuthenticated && logoutLink) {
+        logoutLink.addEventListener('click', (event) => {
             event.preventDefault();
             sessionStorage.removeItem('isAuthenticated');
             window.location.href = 'index.html';
         });
-    } else {
-        if (adminLink) adminLink.style.display = 'block';
-        if (logoutLink) logoutLink.style.display = 'none';
     }
 });

@@ -14,7 +14,7 @@
 */
 @font-face {
     font-family: 'loubag';
-    src: url('fonts/loubag.woff2') format('woff2');
+    src: url('fonts/Loubag-Bold.ttf') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -70,7 +70,7 @@ body::before {
 }
 
 .card-title {
-    font-family: 'loubag', sans-serif; /* Alterado para a nova fonte */
+    font-family: 'loubag', sans-serif; 
     color: var(--cor-principal);
     font-weight: bold;
 }
